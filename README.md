@@ -42,10 +42,10 @@ Welcome to Biblios! Our online bookstore offers a vast selection of books across
 
 ## Installation
 
-1. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install biblios.
+1. Use the package manager [npm](https://docs.npmjs.com/cli/v10/commands/npm-install) to install biblios.
 
 ```bash
-pip install biblios
+npm install biblios
 ```
 
 2. Clone the repository:
