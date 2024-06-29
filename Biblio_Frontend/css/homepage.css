@@ -112,6 +112,7 @@ nav ul li a:hover {
     left: 0;
     z-index: 0;
 }
+
 .image-slider {
     display: flex;
     height: 100%;
@@ -129,3 +130,27 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
 }
+.dot-navigation {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 2;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active,
+.dot:hover {
+    background-color: #ff0000;
+}
+
