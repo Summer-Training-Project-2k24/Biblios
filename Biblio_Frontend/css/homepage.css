@@ -131,12 +131,9 @@ nav ul li a:hover {
     object-fit: cover;
 }
 .dot-navigation {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    z-index: 2;
+  min-width: 50%;
+    margin-top: 25px;
 }
 
 .dot {
@@ -153,4 +150,3 @@ nav ul li a:hover {
 .dot:hover {
     background-color: #ff0000;
 }
-
