@@ -11,7 +11,6 @@ function showSlide(index) {
     slider.style.transform = `translateX(-${100 * index}%)`;
     updateDots(index);
 }
-
 function nextSlide() {
     currentIndex = (currentIndex + 1) % totalSlides;
     showSlide(currentIndex);
