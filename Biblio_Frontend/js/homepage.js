@@ -17,6 +17,14 @@ function nextSlide() {
     showSlide(currentIndex);
 }
 
+function updateDots(index) {
+    dots.forEach((dot, i) => {
+        dot.classList.remove('active');
+        if (i === index) {
+            dot.classList.add('active');
+        }
+    });
+}
 
 function currentSlide(index) {
     currentIndex = index;
