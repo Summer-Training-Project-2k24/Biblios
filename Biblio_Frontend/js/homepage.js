@@ -16,7 +16,6 @@ function nextSlide() {
     currentIndex = (currentIndex + 1) % totalSlides;
     showSlide(currentIndex);
 }
-
 function updateDots(index) {
     dots.forEach((dot, i) => {
         dot.classList.remove('active');
@@ -25,7 +24,6 @@ function updateDots(index) {
         }
     });
 }
-
 function currentSlide(index) {
     currentIndex = index;
     showSlide(index);
