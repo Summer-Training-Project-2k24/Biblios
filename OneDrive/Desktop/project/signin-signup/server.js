@@ -10,10 +10,8 @@ app.use(bodyParser.json());  //req.body
 
 const userroutes=require('./routes/userroutes.js');
 
-
-const candidateroutes=require('./routes/candidaterouttes.js');
 app.use('/user',userroutes);
-app.use('/candidate',candidateroutes);
+
 
 
 app.listen(3400,()=>{

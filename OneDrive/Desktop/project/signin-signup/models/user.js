@@ -10,6 +10,10 @@ age:{
     type:Number,
     required:true
 },
+proffession:{
+    type:String,
+    required:true
+},
 email:{
     type:String,
     required:true,
@@ -20,29 +24,15 @@ mobile:{
     type:String,
     required:true
 
-}
-,adress:{
-    type:String,
-    required:false
-
-
 },
-aadharCardNumber:{
-type:Number,
-required:true,
-unique:true
-},password:{
+password:{
     type:String,
     required:true
 
 },role:{
     type:String,
-    enum:['voter','admin'],
-    default:'voter'
-},
-isVoted:{
-    type:Boolean,
-    default:false
+    enum:['customer','admin'],
+    default:'customer'
 }
 });
 

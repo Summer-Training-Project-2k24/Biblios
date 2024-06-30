@@ -8,9 +8,6 @@ const {jwtauthmidleware,generatetoken}=require('./../jwt');
 router.post('/signup', async(req,res)=>{
 try{
 const data = req.body;// req.body containes person data
-if (!/^\d{12}$/.test(data.aadharCardNumber)) {
-    return res.status(400).json({ error: 'Aadhar Card Number must be exactly 12 digits' });
-}
 const newPerson =  new User(data);
 
 
@@ -25,28 +22,6 @@ res.status(200).json({token});
 }catch(err){
     console.log(err);
     res.status(500).json({error:'Internal server error in sign up'});
-}
-
-})
-
-
-
-router.get('/',jwtauthmidleware, async(req,res)=>{
-try{
-
-const data =  await User.find();
-
-
-console.log('data showing');
-
-res.status(200).json(data);
-
-
-}catch(err){
-    console.log(process.env.secretkey);
-    console.log(err);
-    res.status(500).json({error:'Internal server error'});
-
 }
 
 })
@@ -66,10 +41,11 @@ router.get('/profile', jwtauthmidleware, async (req, res) => {
 
 router.put('/profile/password',jwtauthmidleware, async (req,res)=>{
     try{
-    const userId=req.user.id;
+        const userData = req.userpayload;
+        const userId = userData.id;
      const {currentPassword,newPassword}=req.body;
      //find the user by user id
-     const user=await user.findById(userId);
+     const user=await User.findById(userId);
      //if password doest not match,return error
      if(!(await user.comparePassword(currentPassword))){
         return res.status(401).json({error:"current password"});
@@ -92,12 +68,12 @@ router.post('/login',async (req,res)=>{
     try{
 
     
-    const {aadharCardNumber,password}=req.body;
+    const {email,password}=req.body;
 
-    const user=await User.findOne({aadharCardNumber:aadharCardNumber});
+    const user=await User.findOne({email:email});
 
     if(!user || !(user.comparePassword(password))){
-        res.status(404).json({error:"wrong username or password"});
+        res.status(404).json({error:"wrong email or password"});
     }
   
     const payload={
