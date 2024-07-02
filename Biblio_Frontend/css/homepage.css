@@ -44,7 +44,7 @@ nav ul li a:hover {
 
 .search-account {
     display: flex;
-    align-items:flex-end;
+    margin-right: 10px;
 }
 
 .search-account input {
