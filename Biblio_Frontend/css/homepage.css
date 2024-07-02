@@ -251,6 +251,8 @@ nav ul li a:hover {
 .email-input {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+
 }
 
 .email-input input {
