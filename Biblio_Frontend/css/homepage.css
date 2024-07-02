@@ -225,7 +225,6 @@ nav ul li a:hover {
 
 .hero {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 20px 10px;
     background:lightblue;
@@ -237,18 +236,21 @@ nav ul li a:hover {
 }
 
 .hero-text h1 {
-    font-size: 2em;
+    font-size: 35px;
     margin-bottom: 15px;
+    color: black;
 }
 
 .hero-text p {
     font-size: 1em;
     margin-bottom: 20px;
+    color: black;
+    
 }
 
 .email-input {
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
 }
 
 .email-input input {
@@ -268,10 +270,7 @@ nav ul li a:hover {
 }
 
 .hero-image img {
-    width: 150%;
-    margin-right: 30px;
-    height: auto;
-    border-radius: 10px;
+    width: 500px;
 }
 
 .new-release {
