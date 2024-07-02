@@ -151,3 +151,73 @@ nav ul li a:hover {
 .dot:hover {
     background-color: #ff0000;
 }
+
+
+.categories {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.categories-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.categories-navigation button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 50%;
+}
+
+.categories-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 15px;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+}
+
+.category-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.category-card h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.category-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.view-more {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
