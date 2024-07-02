@@ -227,17 +227,18 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 20px;
-    background: #f5f5f5;
+    padding: 20px 10px;
+    background:lightblue;
 }
 
 .hero-text {
     max-width: 50%;
+    margin-left: 50px;
 }
 
 .hero-text h1 {
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .hero-text p {
@@ -267,9 +268,9 @@ nav ul li a:hover {
 }
 
 .hero-image img {
-    width: 100%;
+    width: 150%;
+    margin-right: 30px;
     height: auto;
-    max-width: 500px;
     border-radius: 10px;
 }
 
