@@ -15,7 +15,7 @@ async function recommandation(ask,reply) {
   console.log(text);
 }
 
-recommandation("Suggest me book aacording the suspense ","Reaper...");
+recommandation("Suggest me book aacording the spiritual base ","Books...");
 
 
 // app.post('/'(req,res)=>{
