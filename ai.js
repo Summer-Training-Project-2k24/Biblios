@@ -1,7 +1,7 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // Access your API key as an environment variable (see "Set up your API key" above)
-const genAI = new GoogleGenerativeAI("steam-verve-406716");
+const genAI = new GoogleGenerativeAI("AIzaSyABh80gEJruqmVwGEDUktELCIzwQvTpjdg");
 
 async function run() {
   // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
