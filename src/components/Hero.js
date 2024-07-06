@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import './styles.css';
+// src/components/Hero.js
+import React, { useState, useEffect } from 'react';
+import './Hero.css';
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const totalSlides = 5;
-  const intervalTime = 3000;
-
   const slides = [
     'https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3N8ZW58MHx8MHx8fDA%3D',
     'https://images.unsplash.com/photo-1616330682546-2468b2d8dd17?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJvb2tzfGVufDB8fDB8fHww',
@@ -14,17 +12,14 @@ const Hero = () => {
     'https://images.unsplash.com/photo-1522407183863-c0bf2256188c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2tzfGVufDB8fDB8fHww'
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((currentIndex + 1) % totalSlides);
-    }, intervalTime);
-
-    return () => clearInterval(interval);
-  }, [currentIndex, totalSlides]);
-
-  const currentSlide = (index) => {
-    setCurrentIndex(index);
+  const nextSlide = () => {
+    setCurrentIndex((currentIndex + 1) % slides.length);
   };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 3000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
   return (
     <section className="hero">
@@ -37,18 +32,18 @@ const Hero = () => {
             {slides.map((_, index) => (
               <span
                 key={index}
-                className={`dot ${currentIndex === index ? 'active' : ''}`}
-                onClick={() => currentSlide(index)}
+                className={`dot ${index === currentIndex ? 'active' : ''}`}
+                onClick={() => setCurrentIndex(index)}
               ></span>
             ))}
           </div>
         </div>
       </div>
       <div className="hero-images">
-        <div className="image-slider" style={{ transform: `translateX(-${100 * currentIndex}%)` }}>
+        <div className="image-slider" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {slides.map((slide, index) => (
             <div className="image-slide" key={index}>
-              <img src={slide} alt={`Book ${index + 1}`} />
+              <img src={slide} alt={`Slide ${index + 1}`} />
             </div>
           ))}
         </div>
