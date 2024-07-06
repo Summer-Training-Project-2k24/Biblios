@@ -21,6 +21,14 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+    "babel": {
+      "presets": ["react-app"],
+      "plugins": [
+        "@babel/plugin-proposal-private-methods",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-private-property-in-object"
+      ]
+    },  
   "eslintConfig": {
     "extends": [
       "react-app",
