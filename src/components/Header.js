@@ -3,25 +3,25 @@ import React from 'react';
 import './Header.css';
 
 const Header = () => (
-  <header>
+  <header className="header">
     <div className="logo">
       <h2>Biblio</h2>
     </div>
     <nav>
-      <ul>
-        <li><a href="#" className="active">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Books</a></li>
-        <li><a href="#">New Release</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Blog</a></li>
+      <ul className="nav-links">
+        <li><a href="/home" className="active">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/books">Books</a></li>
+        <li><a href="/new-release">New Release</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/blog">Blog</a></li>
       </ul>
     </nav>
     <div className="search-account">
       <input type="text" placeholder="Search Books" />
-      <a href="#">Account</a>
-      <a href="#">Cart(0)</a>
-      <a href="#">Wishlist</a>
+      <a href="/account">Account</a>
+      <a href="/cart">Cart(0)</a>
+      <a href="/wishlist">Wishlist</a>
     </div>
   </header>
 );
