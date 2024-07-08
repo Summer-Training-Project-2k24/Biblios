@@ -1,16 +1,22 @@
-import Navbar from "./components/Navbar"
-import Slider from "./components/Slider"
-import Categories from "./components/Categories"
+import Landing from "./pages/Landing"
+import Login from "./pages/Login"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "./App.css"
+
 function App() {
 
   return (
     <div>
-      <Navbar />
-      <Slider/>
-      <Categories one="Higher Education" two="Management Books" three="sldjhfuiahfui" />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/Landing" element={<Landing />} />
+          <Route path="/Login" element={<Login />} />
+
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
+
 
 export default App
