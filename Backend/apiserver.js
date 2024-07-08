@@ -1,2 +1,2 @@
-//coonection to database
+//conection to database
 
