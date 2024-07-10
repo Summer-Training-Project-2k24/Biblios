@@ -25,6 +25,7 @@ const asyncHandler = require('express-async-handler');
 require('dotenv').config();
 
 const ContactMessage = require('./models/contactus.js')
+const Review=require('./auths/models/review.js')
 
 const bookModel = require('./models/books.js');
 const books = require("./sample.json");
@@ -65,3 +66,18 @@ app.get('/allbooks', (req, res) => {
       res.status(500).json({ error: 'Failed to retrieve books' });
     }
   });
+
+  //api to post(add) review to the backend
+  app.post('/api/reviews', async (req, res) => {
+    const { name, email, message, rating } = req.body;
+    const newReview = new Review({ name, email, message, rating });
+  
+    try {
+      await newReview.save();
+      res.status(201).json(newReview);
+    } catch (err) {
+      res.status(400).json({ error: err.message });
+    }
+  });
+
+  
