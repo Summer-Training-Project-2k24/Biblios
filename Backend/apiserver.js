@@ -35,3 +35,17 @@ app.use(cors());
 app.use(bodyParser.json());
 
 connectwithDB();
+
+
+// Api to handle form submission for contact messages
+app.post('/api/contact', async (req, res) => {
+    try {
+      const { name, email, message } = req.body;
+      const newMessage = new ContactMessage({ name, email, message });
+      await newMessage.save();
+      res.status(201).json({ message: 'Message received' });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Failed to save message' });
+    }
+  });
