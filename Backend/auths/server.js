@@ -17,3 +17,7 @@ app.use('/user',userroutes);
 app.listen(3400,()=>{
     console.log('listening on port 3400');
 })
+
+
+
+
