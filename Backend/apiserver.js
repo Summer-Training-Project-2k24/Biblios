@@ -31,7 +31,7 @@ const bookSchema = new mongoose.Schema({
     author: { type: String, required: true },
 });
 
+
+
 const bookModel=mongoose.model("Book",bookSchema)
 module.exports=bookModel
-
-///new authsmkcsmkmkmkcmakmkmkmkkm
