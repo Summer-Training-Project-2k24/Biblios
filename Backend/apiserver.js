@@ -54,3 +54,14 @@ app.post('/api/contact', async (req, res) => {
 app.get('/allbooks', (req, res) => {
     res.send(books);
   });
+
+  //api to get books by tag name
+  app.get('/tag/:tagName', async (req, res) => {
+    try {
+      const taggedBooks = await bookModel.find({ tags: req.params.tagName });
+      res.send(taggedBooks);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Failed to retrieve books' });
+    }
+  });
