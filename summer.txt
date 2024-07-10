@@ -1,0 +1,704 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;Biblio/summer.txt
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #ff0000;
+}
+
+.search-account {
+    display: flex;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+.search-account input {
+    padding: 5px;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-account a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hero-text {
+    text-align: left;
+  max-width: 50%;
+  margin-right: 40%;
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.hero-images {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.image-slider {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-slide {
+    min-width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.dot-navigation {
+    display: flex;
+  min-width: 50%;
+    margin-top: 25px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active,
+.dot:hover {
+    background-color: #ff0000;
+}
+
+
+.categories {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.categories-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.categories-navigation button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 50%;
+}
+
+.categories-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 15px;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+}
+
+.category-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.category-card h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.category-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.view-more {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    background:lightblue;
+}
+
+.hero-text {
+    max-width: 50%;
+    margin-left: 50px;
+}
+
+.hero-text h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.hero-text p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: black;
+    
+}
+
+.email-input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.email-input input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+}
+
+.email-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.hero-image img {
+    width: 500px;
+}
+
+.new-release {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.new-release h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.book-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.book-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: left;
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.book-card p {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+///
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/homepage.css">
+    <title>Home | Biblio</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <h2>Biblio</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">New Release</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="search-account">
+            <input type="text" placeholder="Search Books">
+            <a href="#">Account</a>
+            <a href="#">Cart(0)</a>
+            <a href="#">Wishlist</a>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="hero-text">
+                    <h1>Ipsum Dolor Si</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis urna, a eu.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                  <div class="dot-navigation">
+                        <span class="dot" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
+
+                </div>
+            </div>
+           <div class="hero-images">
+                <div class="image-slider">
+                    <div class="image-slide"><img src="https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3N8ZW58MHx8MHx8fDA%3D" alt="Book 1"></div>
+                    <div class="image-slide"><img src="https://images.unsplash.com/photo-1616330682546-2468b2d8dd17?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJvb2tzfGVufDB8fDB8fHww" alt="Book 2"></div>
+                    <div class="image-slide"><img src="https://images.unsplash.com/photo-1507738978512-35798112892c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJvb2tzfGVufDB8fDB8fHww" alt="Book 3"></div>
+                    <div class="image-slide"><img src="https://images.unsplash.com/photo-1608659597669-b45511779f93?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Ym9va3N8ZW58MHx8MHx8fDA%3D" alt="Book 4"></div>
+                    <div class="image-slide"><img src="https://images.unsplash.com/photo-1522407183863-c0bf2256188c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2tzfGVufDB8fDB8fHww" alt="Book 5"></div>
+                </div>
+            </div>
+        </section>
+        <section class="categories">
+            <h2>Explore our Top Categories</h2>
+            <div class="categories-navigation">
+                <button class="prev">←</button>
+                <button class="next">→</button>
+            </div>
+            <div class="categories-content">
+                <div class="category-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3N8ZW58MHx8MHx8fDA%3D" alt="Higher Education">
+                    <h3>Higher Education</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac. Urna commodo, lacus ut mat.</p>
+                </div>
+                <div class="category-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3N8ZW58MHx8MHx8fDA%3D" alt="Management Books">
+                    <h3>Management Books</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac. Urna commodo, lacus ut mat.</p>
+                </div>
+                <div class="category-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3N8ZW58MHx8MHx8fDA%3D" alt="Engineering Books">
+                    <h3>Engineering Books</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac. Urna commodo, lacus ut mat.</p>
+                </div>
+            </div>
+            <a href="#" class="view-more">View More →</a>
+        </section>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Access, Read, Practice & Engage with Digital Content (eBook)</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis urna, a eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="email-input">
+                    <input type="email" placeholder="Enter Your Email Address">
+                    <button>Login</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1604866830893-c13cafa515d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3N8ZW58MHx8MHx8fDA%3D" alt="Hero Image">
+            </div>
+        </section>
+        <section class="new-release">
+            <h2>New Release Books</h2>
+            <div class="book-cards">
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1507738978512-35798112892c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJvb2tzfGVufDB8fDB8fHww" alt="Book 1">
+                    <p>Simple Way Of Peace Life</p>
+                </div>
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1507738978512-35798112892c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJvb2tzfGVufDB8fDB8fHww" alt="Book 2">
+                    <p>Great Travel</p>
+                </div>
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1507738978512-35798112892c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJvb2tzfGVufDB8fDB8fHww" alt="Book 3">
+                    <p>Once Upon a Time</p>
+                </div>
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1507738978512-35798112892c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJvb2tzfGVufDB8fDB8fHww" alt="Book 3">
+                    <p>Once Upon a Time</p>
+                </div>
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1507738978512-35798112892c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJvb2tzfGVufDB8fDB8fHww" alt="Book 3">
+                    <p>Once Upon a Time</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/homepage.js"></script>
+</body>
+</html>
+
+//js
+
+let currentIndex = 0;
+let intervalTime = 3000;
+
+const slides = document.querySelectorAll('.image-slide');
+const dots = document.querySelectorAll('.dot');
+const totalSlides = slides.length;
+const progressBar = document.querySelector('.progress-bar');
+
+function showSlide(index) {
+    const slider = document.querySelector('.image-slider');
+    slider.style.transform = `translateX(-${100 * index}%)`;
+    updateDots(index);
+}
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+}
+function updateDots(index) {
+    dots.forEach((dot, i) => {
+        dot.classList.remove('active');
+        if (i === index) {
+            dot.classList.add('active');
+        }
+    });
+}
+function currentSlide(index) {
+    currentIndex = index;
+    showSlide(index);
+}
+
+setInterval(nextSlide, intervalTime);
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentIndex);
+});
+
+
+///ai.js
+
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+// Access your API key as an environment variable (see "Set up your API key" above)
+const genAI = new GoogleGenerativeAI("AIzaSyABh80gEJruqmVwGEDUktELCIzwQvTpjdg");
+
+async function recommandation(ask,reply) {
+  // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
+
+  const prompt = `You are booklover and i want you to recommand book accoring to the asked ${ask} with little bit of details and preface of the book in ${reply}`
+
+  const result = await model.generateContent(prompt);
+  const response = await result.response;
+  const text = response.text();
+  console.log(text);
+}
+
+recommandation("Suggest me book aacording the spiritual base ","Books...");
+
+
+// app.post('/'(req,res)=>{
+//     const name = req.body.name;
+//     const problem = req.body.problem;
+
+//     const result = run(name,problem);
+//     res.json({letter: result});
+// })
+
+
+//server.js
+const express = require('express');
+const fs = require('fs');
+
+
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use(express.static(path.join(__dirname, '..', 'Biblio_Frontend' )));
+// Define routes for each HTML file
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'Biblio_Frontend', 'public', 'index.html'));
+});
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
+
+//readme
+# Biblios
+
+Welcome to Biblios! Our online bookstore offers a vast selection of books across various genres, catering to readers of all ages and interests. Whether you're looking for the latest bestsellers, classic literature, or children's books, Biblios has something for everyone.
+
+##  Table of Content
+
+- [Features](#features)
+   - [Extensive Catalog](*)
+   - [User-Friendly Interface](*)
+   - [Convenient Shopping Experience](*)
+   - [Community and Engagement](*)
+- [Getting Started](*)
+   - [Browse the Catalog](*)
+   - [Create an Account](*)
+   - [Add to Cart](*)
+   - [Checkout](*)
+   - [Track Your Order](*)
+   - [Enjoy Your Books](*)
+- [Customer Support](*)
+- [Contributing](*)
+- [License](*)
+
+
+# Getting Started
+
+ **Browse the Catalog:**  Explore our extensive collection by navigating through different genres and categories.
+
+**Create an Account:** Sign up for a free account to access personalized recommendations and manage your orders.
+
+**Add to Cart:** Select the books you want to purchase and add them to your cart.
+
+**Checkout:** Proceed to checkout, choose your preferred payment method, and place your order.
+
+**Track Your Order:** Monitor your order status and shipping details from your account dashboard.
+
+**Enjoy Your Books:** Receive your books and dive into your next great read
+## Prerequisites
+
+1. [Node.js](https://nodejs.org/en/download/package-manager/current) installed
+2. [MongoDB](https://www.mongodb.com/try/download/community) installed (if applicable)
+3. [Firebase](https://firebase.google.com/) account for authentication (if applicable)
+
+## Installation
+
+1. Use the package manager [npm](https://docs.npmjs.com/cli/v10/commands/npm-install) to install biblios.
+
+```bash
+npm install biblios
+```
+
+2. Clone the repository:
+
+```bash
+git clone https://github.com/ArpitaAgrahari/biblios.git
+```
+
+3. Navigate the project directory:
+
+```
+cd biblios
+```
+
+4. Install dependencies:
+
+```
+npm install
+```
+
+## Features
+
+### Extensive Catalog
+**Wide Range of Genres:** Fiction, Non-Fiction, Mystery, Romance, Science Fiction, Fantasy, Biography, Self-Help, and more.
+
+**New Releases and Bestsellers:** Stay updated with the latest trends and popular titles.
+
+**Classics and Rare Finds:** Discover timeless classics and rare editions.
+### User-Friendly Interface
+**Intuitive Search and Filters:** Easily find books by title, author, genre, or ISBN.
+
+**Personalized Recommendations:** Get book suggestions based on your reading history and preferences.
+
+**Customer Reviews and Ratings:** Read reviews and ratings from other readers to help you make informed choices.
+### Community and Engagement
+**Author Events and Book Signings:** Participate in virtual author events and book signings.
+
+**Reading Clubs and Discussions:** Join reading clubs and engage in discussions with fellow book lovers.
+
+**Blog and Newsletter:** Stay informed with our blog posts and newsletters featuring book reviews, author interviews, and more.
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License - see the LICENSE file for details. 
+
+
+//connect.js
+
+const mongoose=require('mongoose');
+const connectDB=async()=>{
+    try{
+        const conn=await mongoose.connect(
+            'mongodb+srv://mail4shavi:6k3rFOJBW82jtwIx@cluster0.xzamzuy.mongodb.net/BookStote?retryWrites=true&w=majority&appName=Cluster0',
+           );
+            console.log('MongoDB Connected');
+    }catch(error){
+        console.error(error);
+        process.exit(1);
+    }
+};
+
+module.exports=connectDB;
+///addtocart.js
+
+const mongoose = require('mongoose');
+
+const cartItemSchema = new mongoose.Schema({
+    id: { type: String, required: true, unique: true },
+    bookId: { type: String, required: true },
+    bookName: { type: String, required: true },
+    author: { type: String, required: true },
+    price: { type: Number, required: true },
+    quantity: { type: Number, required: true, default: 1 },
+    imageUrl: { type: String, required: true },
+    tags: { type: [String], default: [] }
+});
+
+const CartItem = mongoose.model('CartItem', cartItemSchema);
+
+module.exports = CartItem;
+
+
+///books.js
+const mongoose=require('mongoose')
+
+const bookSchema = new mongoose.Schema({
+    id: { type: String, required: true, unique: true },
+    name: { type: String, required: true },
+    price: { type: Number, required: true },
+    tags: { type: [String], default: [] },
+    favorite: { type: Boolean, default: false },
+    stars: { type: Number, min: 0, max: 5 },
+    imageUrl: { type: String, required: true },
+    author: { type: String, required: true },
+});
+
+const bookModel=mongoose.model("Book",bookSchema)
+module.exports=bookModel
+
+
+//user.js
+
+const mongoose = require('mongoose');
+
+const userSchema = new mongoose.Schema({
+    id: { type: String, required: true, unique: true },
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    address: { type: String, required: true },
+});
+
+const userModel = mongoose.model('User', userSchema);
+
+module.exports = userModel;
+
