@@ -80,4 +80,12 @@ app.get('/allbooks', (req, res) => {
     }
   });
 
-  
+  //api to get all the reviews from the backend
+  app.get('/api/reviews', async (req, res) => {
+    try {
+      const reviews = await Review.find();
+      res.json(reviews);
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  });
