@@ -49,3 +49,8 @@ app.post('/api/contact', async (req, res) => {
       res.status(500).json({ error: 'Failed to save message' });
     }
   });
+
+  // Route to get all books
+app.get('/allbooks', (req, res) => {
+    res.send(books);
+  });
