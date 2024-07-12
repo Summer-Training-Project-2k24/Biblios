@@ -1,0 +1,22 @@
+.review-list {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  
+  .review-item {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-item h3 {
+    margin: 0 0 0.5rem;
+  }
+  
+  .review-item p {
+    margin: 0.5rem 0;
+  }
+  

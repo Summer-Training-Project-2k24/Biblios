@@ -1,0 +1,153 @@
+.about {
+    margin-top: 0.2rem;
+    padding: 2rem 2rem;
+    text-align: center;
+    background-color: #b2c5d7;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+  }
+  
+  .head {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+  }
+  
+  .us {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  
+  .img {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 1rem;
+  }
+  
+  .about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transitions */
+  }
+  
+  .about-image:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  .para {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .para p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    transition: color 0.3s; /* Add transition */
+  }
+  
+  .para p:hover {
+    color: #000; /* Change color on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+  
+    .para {
+      text-align: center;
+    }
+  }
+  
+  .team {
+    margin-top: 2rem;
+    background-color: #eceff1;
+    padding: 3rem 2rem;
+  }
+  
+  .head2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .team-member {
+    text-align: center;
+    width: 200px;
+    margin-bottom: 3rem;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transitions */
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px); /* Move up slightly on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transitions */
+  }
+  
+  .team-member img:hover {
+    transform: scale(1.1); /* Slightly scale up on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  .team-member h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+    transition: color 0.3s; /* Add transition */
+  }
+  
+  .team-member h3:hover {
+    color: #000; /* Change color on hover */
+  }
+  
+  .team-member p {
+    font-size: 1rem;
+    color: #666;
+    transition: color 0.3s; /* Add transition */
+  }
+  
+  .team-member p:hover {
+    color: #333; /* Change color on hover */
+  }
+  
