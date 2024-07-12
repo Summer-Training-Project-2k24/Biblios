@@ -1,5 +1,5 @@
 import React from 'react';
-import './Aboutus.css';
+import './aboutus.css';
 import a2 from './images/a.jpg';
 import s from './images/s.jpg';
 import h from './images/h.jpg';
