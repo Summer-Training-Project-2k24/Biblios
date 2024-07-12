@@ -123,10 +123,8 @@ margin-right: 40%;
 
 .image-slider {
   display: flex;
-  padding: 100px;
-  height: 100vh;
-  width: 1024px;
-
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
 .image-slide {
@@ -175,19 +173,21 @@ min-width: 50%;
 
 .categories-navigation {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 40%;
+    margin-right: 40%;
 }
 
 .categories-navigation button {
   background-color: #ff0000;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin: 0 10px;
-  border-radius: 50%;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 50%;
 }
 
 .categories-content {
