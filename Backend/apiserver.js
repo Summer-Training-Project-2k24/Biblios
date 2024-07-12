@@ -57,15 +57,19 @@ app.get('/allbooks', (req, res) => {
   });
 
   //api to get books by tag name
-  app.get('/tag/:tagName', async (req, res) => {
-    try {
-      const taggedBooks = await bookModel.find({ tags: req.params.tagName });
-      res.send(taggedBooks);
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ error: 'Failed to retrieve books' });
+  app.get('/tag/:tagName', asyncHandler(async (req, res) => {
+    const { tagName } = req.params;
+  
+    if (tagName === 'All') {
+      // Fetch all books if the tag is "All"
+      const allBooks = await bookModel.find({});
+      return res.send(allBooks);
+    } else {
+      // Fetch books by specific tag
+      const books = await bookModel.find({ tags: tagName });
+      return res.send(books);
     }
-  });
+  }));
 
   //api to post(add) review to the backend
   app.post('/api/reviews', async (req, res) => {
