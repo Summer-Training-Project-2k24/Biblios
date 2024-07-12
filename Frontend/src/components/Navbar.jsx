@@ -8,7 +8,7 @@ return  <header>
             <ul>
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Books</a></li>
+                <li><a href="http://localhost:3001">Books</a></li>
                 <li><a href="#">New Release</a></li>
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Blog</a></li>
@@ -17,7 +17,6 @@ return  <header>
         <div class="search-account">
             <input type="text" placeholder="Search Books"/>
             <a href="#">Account</a>
-            <a href="#">Cart(0)</a>
             <a href="#">Wishlist</a>
         </div>
     </header>

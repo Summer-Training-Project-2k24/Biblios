@@ -123,8 +123,10 @@ margin-right: 40%;
 
 .image-slider {
   display: flex;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
+  padding: 100px;
+  height: 100vh;
+  width: 1024px;
+
 }
 
 .image-slide {
