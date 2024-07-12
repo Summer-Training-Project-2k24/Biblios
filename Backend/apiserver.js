@@ -93,3 +93,31 @@ app.get('/allbooks', (req, res) => {
       res.status(500).json({ error: err.message });
     }
   });
+
+  //api to get all the tags from the backend
+  app.get('/tags', asyncHandler(async (req, res) => {
+    const tags = await bookModel.aggregate([
+      { $unwind: '$tags' },
+      {
+        $group: {
+          _id: '$tags',
+          count: { $sum: 1 }
+        }
+      },
+      {
+        $project: {
+          _id: 0,
+          name: '$_id',
+          count: '$count'
+        }
+      }
+    ]).sort({ count: -1 });
+  
+    const all = {
+      name: 'All',
+      count: await bookModel.countDocuments()
+    };
+  
+    tags.unshift(all);
+    res.send(tags);
+  }));
