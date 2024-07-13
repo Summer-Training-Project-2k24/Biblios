@@ -10,7 +10,7 @@ age:{
     type:Number,
     required:true
 },
-proffession:{
+profession:{
     type:String,
     required:true
 },
