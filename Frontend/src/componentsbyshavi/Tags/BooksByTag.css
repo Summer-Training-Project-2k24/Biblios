@@ -1,0 +1,17 @@
+.books-container {
+    padding: 20px;
+  }
+  
+  .books-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .book-item {
+    background-color: #f0f4f8;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+  }
+  

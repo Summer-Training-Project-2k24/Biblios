@@ -11,7 +11,15 @@ app.use(cors({ origin: 'http://localhost:5173' })); // Use the cors middleware w
 const userRoutes = require('./routes/userroutes');
 app.use('/user', userRoutes);
 
+
 const PORT = process.env.PORT || 3400;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+
+
+
+
+
+>>>>>>> signinsignupfrontend
