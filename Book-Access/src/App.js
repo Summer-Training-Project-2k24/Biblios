@@ -16,6 +16,7 @@ import loadingImg from "./assets/loader.gif";
 import "./style.css";
 import Fiction from "./components/Fiction/Fiction";
 import Biography from "./components/Bio/Biography";
+import bookModel from "./Books";
 
 const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -31,6 +32,19 @@ const App = () => {
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
 
+
+    for (let i = 0; i < data.length; i++) {
+      try {
+        await bookModel.create({
+          name: data[i].name,
+          price: data[i].price.formatted_with_symbol,
+          imageUrl: data[i].assets[0].url,
+          description: data[i].description, // Ensure you include all required fields
+        });
+      } catch (error) {
+        console.error('Error creating book entry:', error);
+      }
+    }
     setProducts(data);
   };
 
