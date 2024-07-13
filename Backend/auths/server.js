@@ -11,8 +11,6 @@ app.use(cors({ origin: 'http://localhost:5173' })); // Use the cors middleware w
 const userRoutes = require('./routes/userroutes');
 app.use('/user', userRoutes);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const userroutes=require('./routes/userroutes.js');
 
