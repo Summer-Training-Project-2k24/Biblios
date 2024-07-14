@@ -10,7 +10,7 @@ age:{
     type:Number,
     required:true
 },
-proffession:{
+profession:{
     type:String,
     required:true
 },
@@ -54,7 +54,7 @@ userSchema.pre('save',async function(next){
 
         next(err);
     }
-
+//mmk
 })
 
 
