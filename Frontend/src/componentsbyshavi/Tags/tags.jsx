@@ -35,17 +35,3 @@ const Tags = () => {
 };
 
 export default Tags;
-
-//App.js file function for the tags component to work
-// function App() {
-//     return (
-//       <Router>
-//         <div className="App">
-//           <Routes>
-//             <Route path="/" element={<Tags />} />
-//             <Route path="/tag/:tagName" element={<BooksByTag />} />
-//           </Routes>
-//         </div>
-//       </Router>
-//     );
-//   }

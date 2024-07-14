@@ -1,11 +1,10 @@
 import React from 'react';
-import './aboutus.css';
-import a2 from './images/a2.jpeg';
-import s from './images/s.jpeg';
-import h from './images/h.jpeg';
-import m from './images/m.jpeg';
+import a2 from '../assets/a2.jpeg';
+import s from '../assets/s.jpeg';
+import h from '../assets/h.jpeg';
+import m from '../assets/m.jpeg';
 
-function About() {
+export default function () {
   return (
     <div className="about">
       <h1 className="head">About Us</h1>
@@ -56,5 +55,3 @@ function About() {
     </div>
   );
 }
-
-export default About;
