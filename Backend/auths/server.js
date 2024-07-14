@@ -11,7 +11,6 @@ app.use(cors({ origin: 'http://localhost:5173' })); // Use the cors middleware w
 const userRoutes = require('./routes/userroutes');
 app.use('/user', userRoutes);
 
-<<<<<<< HEAD
 
 const userroutes=require('./routes/userroutes.js');
 
@@ -27,8 +26,21 @@ app.listen(3400,()=>{
 
 
 =======
+=======
+
+>>>>>>> newauths
 const PORT = process.env.PORT || 3400;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+<<<<<<< HEAD
+>>>>>>> newauths
+=======
+
+
+
+
+
+
+
 >>>>>>> newauths

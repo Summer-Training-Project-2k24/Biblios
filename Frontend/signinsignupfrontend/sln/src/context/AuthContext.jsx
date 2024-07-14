@@ -5,6 +5,8 @@ import { fetchProfile as fetchProfileApi } from '../api';
 
 const AuthContext = createContext();
 
+
+
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [authError, setAuthError] = useState(null);
@@ -22,6 +24,7 @@ export const AuthProvider = ({ children }) => {
             setAuthError('Signup failed');
         }
     };
+
 
     const loginUser = async (credentials) => {
         try {
