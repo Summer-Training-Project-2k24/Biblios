@@ -11,7 +11,6 @@ import Review from "./Review";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
-const [error, setError] = useState(null);
 const PaymentForm = ({
   checkoutToken,
   nextStep,
@@ -31,8 +30,9 @@ const PaymentForm = ({
       card: cardElement,
     });
 
-    
-    try {
+    if (error) {
+      console.log("[error]", error);
+    } else {
       const orderData = {
         line_items: checkoutToken.live.line_items,
         customer: {
@@ -57,18 +57,14 @@ const PaymentForm = ({
         },
       };
 
-      await onCaptureCheckout(checkoutToken.id, orderData);
+      onCaptureCheckout(checkoutToken.id, orderData);
 
       nextStep();
-    }catch(error){
-      setError("Failed to process payment. Please try again.");
-      console.log(error);
     }
   };
 
   return (
     <>
-    {error && <div style={{ color: 'red' }}>{error}</div>} {"Error occured"}
       <Review checkoutToken={checkoutToken} />
       <Divider />
       <Typography variant="h6" gutterBottom style={{ margin: "20px 0" }}>
