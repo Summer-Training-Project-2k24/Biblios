@@ -639,3 +639,147 @@ button:hover {
     border-bottom: 1px solid #ddd;
   }
 }
+
+
+
+/* Container for forms */
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px;
+}
+
+/* Form elements */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Profile styles */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile p {
+  margin: 5px 0;
+}
+
+.profile button {
+  background-color: #28a745;
+}
+
+.profile button:hover {
+  background-color: #218838;
+}
+
+
+
+.footer {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.footer .font-medium {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer .logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.footer .text-uppercase {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #f9f9f9;
+}
+
+.footer p {
+  color: #ccc;
+}
+
+.footer .btn-link {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 0;
+}
+
+.footer .btn-link:hover {
+  color: #0056b3;
+}
+
+.footer .btn-floating {
+  display: inline-block;
+  margin-right: .1rem;
+}
+
+.footer .btn-floating i {
+  color: #007bff;
+  font-size: 1.25rem;
+}
+
+.footer .grey-text {
+  color: #ccc;
+}
+
+.footer .list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -.25rem;
+}
+
+.footer .list-inline-item {
+  display: inline-block;
+}
+
+.footer .list-inline-item a {
+  color: #007bff;
+}
+
+.footer .list-inline-item a:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .footer .text-md-left {
+    text-align: center !important;
+  }
+
+  .footer .text-md-right {
+    text-align: center !important;
+  }
+}
