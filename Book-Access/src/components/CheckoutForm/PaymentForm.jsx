@@ -31,9 +31,8 @@ const PaymentForm = ({
       card: cardElement,
     });
 
-    if (error) {
-      console.log("[error]", error);
-    } else {
+    
+    try {
       const orderData = {
         line_items: checkoutToken.live.line_items,
         customer: {
@@ -58,14 +57,18 @@ const PaymentForm = ({
         },
       };
 
-      onCaptureCheckout(checkoutToken.id, orderData);
+      await onCaptureCheckout(checkoutToken.id, orderData);
 
       nextStep();
+    }catch(error){
+      setError("Failed to process payment. Please try again.");
+      console.log(error);
     }
   };
 
   return (
     <>
+    {error && <div style={{ color: 'red' }}>{error}</div>} {"Error occured"}
       <Review checkoutToken={checkoutToken} />
       <Divider />
       <Typography variant="h6" gutterBottom style={{ margin: "20px 0" }}>
