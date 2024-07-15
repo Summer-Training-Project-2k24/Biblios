@@ -7,7 +7,7 @@ import SignupForm from './components/SignupForm';
 import LoginForm from './components/LoginForm';
 import Profile from './components/Profile';
 import { AuthProvider } from './context/AuthContext';
-import PrivateRoute from './components/PrivateRoute';
+// import PrivateRoute from './components/PrivateRoute';
 
 
 
@@ -20,10 +20,9 @@ function App() {
    
 
        <BrowserRouter>
-        {/* <Routes>
+       <Routes>
           <Route path="/" element={<Landing />} />
-          </Routes> */}
-      
+          </Routes> 
 
           <AuthProvider>
       <Routes>
@@ -37,6 +36,9 @@ function App() {
   
   )
 }
-
+const PrivateRoute = ({ children }) => {
+  const isAuthenticated = !!localStorage.getItem('token'); // Simplified auth check
+  return isAuthenticated ? children : <Navigate to="/login" />;
+};
 
 export default App
