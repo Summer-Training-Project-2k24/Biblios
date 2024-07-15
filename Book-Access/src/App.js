@@ -31,7 +31,7 @@ const App = () => {
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
-
+    console.log(data);
 
     for (let i = 0; i < data.length; i++) {
       try {
