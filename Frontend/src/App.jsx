@@ -1,5 +1,5 @@
 import Landing from "./pages/Landing";
-import About from "./pages/Aboutus.jsx";
+import About from "../src/pages/Aboutus";
 import ContactUs from "./pages/contactus"
 
 import React from 'react';
