@@ -19,7 +19,7 @@ function App() {
   return (
        <BrowserRouter>
        <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/landing" element={<Landing />} />
           <Route path="/about" element={<About/>}/>
           <Route path="/contact" element={<ContactUs/>}/>
           </Routes> 
@@ -27,7 +27,7 @@ function App() {
           <AuthProvider>
       <Routes>
         <Route path="/signup" element={<SignupForm />} />
-        <Route path="/login" element={<LoginForm />} />
+        <Route path="/" element={<LoginForm />} />
         <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
