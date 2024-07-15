@@ -11,6 +11,7 @@ import Review from "./Review";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
+const [error, setError] = useState(null);
 const PaymentForm = ({
   checkoutToken,
   nextStep,
