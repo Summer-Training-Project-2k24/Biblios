@@ -1,7 +1,7 @@
 import React from 'react';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from 'mdbreact';
-import logo from './images/circle.jpg';
-import './footer.css';
+import logo from '../components/assets/circles.png' ;
+import './Footer.css';
 
 const Footer = () => {
   return (
