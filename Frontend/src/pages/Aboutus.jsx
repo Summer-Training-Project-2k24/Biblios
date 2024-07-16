@@ -3,9 +3,9 @@ import a2 from '../assets/a2.jpeg';
 import s from '../assets/s.jpeg';
 import h from '../assets/h.jpeg';
 import m from '../assets/m.jpeg';
+import Bookshop1 from '../assets/Bookshop1.gif'
 
-export default function () {
-  return (
+export default function AboutUs () { return (
     <div className="about">
       <h1 className="head">About Us</h1>
       <p className="us">
@@ -16,7 +16,7 @@ export default function () {
           <img
             className="about-image"
             loading="lazy"
-            src="https://i.pinimg.com/474x/a3/eb/1e/a3eb1e5d87229ecdea29bfcd04453123.jpg"
+            src={Bookshop1}
             alt="About Us"
           />
         </div>

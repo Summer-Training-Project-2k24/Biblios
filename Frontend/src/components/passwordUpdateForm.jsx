@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { updatePassword } from '../api';
-import './styles.css'; // Import the CSS file
 
+// update passowrd
 const PasswordUpdateForm = () => {
     const [formData, setFormData] = useState({
         currentPassword: '',

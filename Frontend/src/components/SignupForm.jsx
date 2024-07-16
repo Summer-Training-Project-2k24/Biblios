@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import AuthContext from '../context/AuthContext';
-import './style.css';
 
 const SignupForm = () => {
   const { signupUser } = useContext(AuthContext);
