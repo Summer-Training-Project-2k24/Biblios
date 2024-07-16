@@ -1,32 +1,31 @@
-const express = require("express");
-const router = express.Router()
 
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const express = require('express');
+const router = express.Router();
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 
-// Access your API key as an environment variable (see "Set up your API key" above)
-const genAI = new GoogleGenerativeAI("AIzaSyABh80gEJruqmVwGEDUktELCIzwQvTpjdg");
+// Access your API key as an environment variable
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 
-async function recommandation(ask, reply) {
-    // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
-    const prompt = `You are booklover and i want you to recommand book accoring to the asked ${ask} with little bit of details and preface of the book in ${reply}`
-
+async function recommendation(ask) {
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const prompt = `
+        You are Mood Reader, a kind-hearted and soft-hearted AI who loves recommending books. Introduce yourself as Mood Reader and make the user feel that you are their friendly book recommender. Based on the asked ${ask}, recommend a book with a little bit of detail and a preface of the book. Make sure to include all relevant book keywords. If anyone asks about explicit content or queries unrelated to book recommendations, kindly respond with, 'This is not my area of expertise. I am here to help you with book recommendations.' Always be respectful, kind, and friendly in your responses.
+        `;
     const result = await model.generateContent(prompt);
     const response = await result.response;
-    const text = response.text();
-    console.log(text);
+    const text = await response.text();
+    return text;
 }
 
-recommandation("Suggest me book aacording the spiritual base ", "Books...");
+router.post('/recommend', async function (req, res) {
+    const mood = req.body.mood;
+    try {
+        const result = await recommendation(mood);
+        res.json({ recommendation: result });
+    } catch (error) {
+        console.error('Error generating recommendation:', error);
+        res.status(500).json({ error: 'Failed to get recommendation' });
+    }
+});
 
-
-router.post('/', function (req, res) {
-    const name = req.body.name;
-    const problem = req.body.problem;
-
-    const result = run(name, problem);
-    res.json({ letter: result });
-})
-
-module.exports=router;
+module.exports = router;
