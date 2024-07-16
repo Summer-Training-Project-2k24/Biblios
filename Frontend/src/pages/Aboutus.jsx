@@ -5,7 +5,7 @@ import h from '../assets/h.jpeg';
 import m from '../assets/m.jpeg';
 import Bookshop1 from '../assets/Bookshop1.gif'
 
-export default function () { return (
+export default function AboutUs () { return (
     <div className="about">
       <h1 className="head">About Us</h1>
       <p className="us">
