@@ -1,4 +1,4 @@
-// Assume these functions interact with a backend or local storage
+//these functions interact with a backend or local storage
 export const getCart = async () => {
     // Mocking a cart fetch. Replace with actual API call or local storage retrieval.
     return {
