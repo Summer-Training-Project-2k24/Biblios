@@ -12,7 +12,6 @@ import Profile from './components/Profile';
 import { AuthProvider } from './context/AuthContext';
 // import PrivateRoute from './components/PrivateRoute';
 import MoodReader from "./components/MoodReader";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "./App.css"
 
@@ -27,6 +26,7 @@ function App() {
           <Route path="/about" element={<AboutUs/>}/>
           <Route path="/contact" element={<ContactUs/>}/>
           <Route path="/footer1" element={<Footer1 />}/>
+          
           </Routes> 
 
           <AuthProvider>
