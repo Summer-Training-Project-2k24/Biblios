@@ -18,6 +18,10 @@ import "./App.css"
 function App() {
 
   return (
+<<<<<<< HEAD
+=======
+  
+>>>>>>> signinsignupfrontend
 
        <BrowserRouter>
         <MoodReader/>
