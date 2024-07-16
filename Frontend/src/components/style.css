@@ -1,0 +1,45 @@
+/* style.css */
+.carousel .slick-slide {
+    height: 100vh; /* Adjust height as needed */
+  }
+  .bg {
+    background: url('image7.png') center center fixed;
+    background-size: cover;
+  }
+  .carousel-slide {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+  .card {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  .dark .card {
+    background: rgba(55, 65, 81, 0.5);
+  }
+  .auth-section {
+    display: flex;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .carousel-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keep carousel in the background */
+  }
+  
+  .form-side {
+    z-index: 1; /* Keep the form in front */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
