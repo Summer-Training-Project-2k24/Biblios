@@ -2,6 +2,18 @@ import Landing from "./pages/Landing";
 import AboutUs from "./pages/aboutus";
 import ContactUs from "./pages/contactus";
 import Footer1 from "./pages/footer1";
+import Navbar from "./components/Navbar";
+import Slider from "./components/Slider";
+import Categories from "./components/Categories";
+import Footer from "./components/Footer";
+import Cart from "./components/book/cart";
+import BookPage from "./components/book/bookpage";
+import NotFound from "./components/book/notfound";
+import { useState, useEffect } from 'react';
+import { getCart, removeFromCart, changeQuantity } from './components/pages/cartFunction'; 
+import { useParams, Link, useHistory } from 'react-router-dom';
+import bookService from './components/book/bookservice';
+import './components/book/BookPage.css';
 
 import React from 'react';
 import {Navigate } from 'react-router-dom';
@@ -18,10 +30,7 @@ import "./App.css"
 function App() {
 
   return (
-<<<<<<< HEAD
-=======
   
->>>>>>> signinsignupfrontend
 
        <BrowserRouter>
         <MoodReader/>
