@@ -1,5 +1,5 @@
 import Landing from "./pages/Landing";
-import AboutUs from "./pages/aboutus";
+import AboutUs from "./pages/Aboutus";
 import ContactUs from "./pages/contactus";
 import Footer1 from "./pages/footer1";
 import Navbar from "./components/Navbar";

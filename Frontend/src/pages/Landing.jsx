@@ -1,11 +1,11 @@
-import Navbar from "./navbar"
-import Slider from "./slider"
+import Navbar from "../components/Navbar"
+import Slider from "../components/Slider"
 //import Categories from "./categories"
-import WhyUsSlider from './WhyUsSlider'; 
+import WhyUsSlider from '../components/WhyUsSlider'; 
 
-import AuthorSlider from './AuthorSlider';
-import Footer from "./footer";
-import BookGenresSection from "./genre";
+import AuthorSlider from '..components/AuthorSlider';
+import Footer from "./footer1";
+import BookGenresSection from "../components/BookGenre";
 
 const Landing=()=> {
     return <div>
