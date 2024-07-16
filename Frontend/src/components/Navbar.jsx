@@ -15,8 +15,7 @@ return  <header>
             </ul>
         </nav>
         <div class="search-account">
-            <input type="text" placeholder="Search Books"/>
-            <a href="#">Account</a>
+            <a href="http://localhost:5173/Profile">Account</a>
             <a href="#">Wishlist</a>
         </div>
     </header>

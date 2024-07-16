@@ -302,14 +302,18 @@ function MoodReader() {
 
   const getBookSuggestions = async (mood) => {
     try {
-      const response = await fetch('/api/recommend', {
+      const response = await fetch('http://localhost:5000/ai/recommend', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ mood }),
+        body: JSON.stringify({
+          "mood": mood
+        })
       });
+      
       const data = await response.json();
+      console.log(data);
       return data.recommendation;
     } catch (error) {
       console.error('Failed to get suggestions:', error);
