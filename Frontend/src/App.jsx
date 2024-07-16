@@ -1,6 +1,6 @@
 import Landing from "./pages/Landing";
 import About from "./pages/Aboutus";
-import ContactUs from "./pages/contactus"
+import ContactUs from "./pages/contactus";
 
 import React from 'react';
 import {Navigate } from 'react-router-dom';
