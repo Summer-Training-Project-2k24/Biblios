@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import AuthContext from '../context/AuthContext';
+<<<<<<< HEAD
 // <<<<<<< HEAD
 // import circles from '../assets/circles.png';
 
@@ -7,6 +8,10 @@ import AuthContext from '../context/AuthContext';
 import './style.css';
 import circles from './circles.png';
 // >>>>>>> signinsignupfrontend
+=======
+import './style.css';
+import circles from '../assets/circles.png';
+>>>>>>> 14d1b06164b399399ac0ae76dab5f4a6120430d6
 
 const AuthForm = () => {
   const { loginUser, signupUser } = useContext(AuthContext);
@@ -39,12 +44,15 @@ const AuthForm = () => {
   return (
     <section className="bg bg-gray-50 dark:bg-gray-900">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+<<<<<<< HEAD
 {/* <<<<<<< HEAD
         <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
           <img className="w-10 h-10 mr-2" src={circles.png} />
         </a>
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
 ======= */}
+=======
+>>>>>>> 14d1b06164b399399ac0ae76dab5f4a6120430d6
       <div
               className="w-20 aa h-20 mr-2"
               style={{ backgroundImage: `url(${circles})`, backgroundSize: 'cover' }}
@@ -52,7 +60,10 @@ const AuthForm = () => {
            <div className='text-xl font-bold  text-gray-900 '> Biblios </div>
        
         <div className="w-full card rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+<<<<<<< HEAD
 {/* >>>>>>> signinsignupfrontend */}
+=======
+>>>>>>> 14d1b06164b399399ac0ae76dab5f4a6120430d6
           <div className="p-6 md:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white mb-6">
               {isLogin ? 'Sign in to your account' : 'Create a new account'}
