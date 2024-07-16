@@ -690,3 +690,43 @@ li .remove-button:hover {
   background-color: #0056b3;
 }
 
+/*why us card css*/
+/* src/WhyUsCard.css */
+.why-us-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1080px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-image {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.why-us-card h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.why-us-card p {
+  font-size: 1em;
+  color: #555;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+}
