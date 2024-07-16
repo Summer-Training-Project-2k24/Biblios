@@ -1,6 +1,7 @@
 import Landing from "./pages/Landing";
 import AboutUs from "./pages/aboutus";
 import ContactUs from "./pages/contactus";
+import Footer1 from "./pages/footer1";
 
 import React from 'react';
 import {Navigate } from 'react-router-dom';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/about" element={<AboutUs/>}/>
           <Route path="/contact" element={<ContactUs/>}/>
+          <Route path="/footer1" element={<Footer1 />}/>
           </Routes> 
 
           <AuthProvider>
