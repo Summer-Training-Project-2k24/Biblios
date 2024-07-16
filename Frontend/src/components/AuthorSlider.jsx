@@ -1,6 +1,6 @@
 // src/AuthorSlider.js
 import React, { useState } from 'react';
-import './AuthorSlider.css';
+//import './AuthorSlider.css';
 import ana from './images/ana.jpg'
 import dov from './images/dov.jpg'
 import rynx from './images/rynx.jpg'

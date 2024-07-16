@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './WhyUsCard.css';
+//import './WhyUsCard.css';
 
 const WhyUsCard = ({ title, description, image }) => {
   return (
