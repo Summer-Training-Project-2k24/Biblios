@@ -28,6 +28,7 @@ const MoodButton = styled.button`
 
 const Sidebar = styled.div`
   position: fixed;
+  z-index:99;
   right: ${props => props.active ? '0' : '-350px'};
   top: 0;
   width: 350px;

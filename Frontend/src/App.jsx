@@ -10,6 +10,7 @@ import LoginForm from './components/LoginForm';
 import Profile from './components/Profile';
 import { AuthProvider } from './context/AuthContext';
 // import PrivateRoute from './components/PrivateRoute';
+import MoodReader from "./components/MoodReader";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "./App.css"
@@ -17,7 +18,9 @@ import "./App.css"
 function App() {
 
   return (
+
        <BrowserRouter>
+        <MoodReader/>
        <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/about" element={<AboutUs/>}/>
@@ -30,7 +33,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
-        <Route path="*" element={<Navigate to="/login" />} />
+        {/* <Route path="" element={<Navigate to="/login" />} /> */}
       </Routes>
     </AuthProvider>
     </BrowserRouter> 
