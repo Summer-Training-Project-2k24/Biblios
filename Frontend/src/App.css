@@ -650,4 +650,43 @@ li .remove-button:hover {
   font-size: 1.2rem;
 }
 
+/*why us slider css*/
+/* src/WhyUsSlider.css */
+.why-us-slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: right;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 80px;
+}
+
+.slider-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  
+}
+
+.slider-button:hover {
+  background-color: #0056b3;
+}
 
