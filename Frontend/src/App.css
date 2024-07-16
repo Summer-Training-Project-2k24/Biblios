@@ -7,6 +7,12 @@
 }
 
 body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
 }
 
@@ -232,16 +238,7 @@ min-width: 50%;
 }
 
 
-General styles
-body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
+
 
 .auth-container {
   width: 350px;

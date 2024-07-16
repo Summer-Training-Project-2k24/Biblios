@@ -1,15 +1,24 @@
-import Navbar from "../components/Navbar"
-import Slider from "../components/Slider"
-import Categories from "../components/Categories"
-import Footer1 from "./footer1"
+import Navbar from "./navbar"
+import Slider from "./slider"
+//import Categories from "./categories"
+import WhyUsSlider from './WhyUsSlider'; 
 
+import AuthorSlider from './AuthorSlider';
+import Footer from "./footer";
+import BookGenresSection from "./genre";
 
-export default function () {
+const Landing=()=> {
     return <div>
         <Navbar />
         <Slider />
-        <Categories one="Higher Education" two="Management Books" three="" />
-        <Footer1 />
-        
+        {/* <Categories one="Higher Education" two="Management Books" three="" /> */}
+        <AuthorSlider />
+        <BookGenresSection/>
+     <section className="why-us-section">
+          <h2>Why Should You Buy From Us?</h2>
+          <WhyUsSlider />
+        </section>
+        <Footer/>
     </div>
 }
+export default Landing;

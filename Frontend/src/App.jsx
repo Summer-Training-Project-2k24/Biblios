@@ -1,5 +1,5 @@
 import Landing from "./pages/Landing";
-import AboutUs from "./pages/Aboutus";
+import AboutUs from "./pages/aboutus";
 import ContactUs from "./pages/contactus";
 import Footer1 from "./pages/footer1";
 import Navbar from "./components/Navbar";
@@ -14,8 +14,8 @@ import { useParams, Link, useHistory } from 'react-router-dom';
 import bookService from './components/book/bookservice';
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom'; // Updated import
 import SignupForm from './components/SignupForm';
 import ForgotPassword from "./components/passwordUpdateForm"
 import LoginForm from './components/LoginForm';
@@ -23,7 +23,6 @@ import Profile from './components/Profile';
 import { AuthProvider } from './context/AuthContext';
 // import PrivateRoute from './components/PrivateRoute';
 import MoodReader from "./components/MoodReader";
-import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "./App.css"
 
 function App() {
