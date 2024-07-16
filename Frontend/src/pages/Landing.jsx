@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar"
 import Slider from "../components/Slider"
 import Categories from "../components/Categories"
-import Footer1 from "./footer1"
+import Footer1 from "./Footer1"
 
 
 export default function () {

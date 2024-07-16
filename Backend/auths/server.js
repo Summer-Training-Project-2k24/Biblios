@@ -28,7 +28,7 @@ app.use('/ai', aiRouter);
 //     console.log('listening on port 3400');
 // })
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3400;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

@@ -14,8 +14,11 @@ return  <header>
                 <li><a href="#">Blog</a></li>
             </ul>
         </nav>
+        
         <div class="search-account">
-            <a href="http://localhost:5173/Profile">Account</a>
+            <a href="http://localhost:5173/Profile">profile</a>
+            <a href="http://localhost:5173/login">login</a>
+            
             <a href="#">Wishlist</a>
         </div>
     </header>

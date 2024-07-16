@@ -1,7 +1,7 @@
 import Landing from "./pages/Landing";
-import AboutUs from "./pages/aboutus";
-import ContactUs from "./pages/contactus";
-import Footer1 from "./pages/footer1";
+import AboutUs from "./pages/Aboutus";
+import ContactUs from "./pages/Contactus";
+import Footer1 from "./pages/Footer1";
 
 import React from 'react';
 import {Navigate } from 'react-router-dom';
@@ -18,10 +18,10 @@ import "./App.css"
 function App() {
 
   return (
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
   
->>>>>>> signinsignupfrontend
+// >>>>>>> signinsignupfrontend
 
        <BrowserRouter>
         <MoodReader/>
@@ -37,8 +37,9 @@ function App() {
       <Routes>
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/login" element={<LoginForm />} />
+        <Route path="/login" element={<LoginForm />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
-        <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+        <Route path="/profile" element={<Profile />} />
         {/* <Route path="" element={<Navigate to="/login" />} /> */}
       </Routes>
     </AuthProvider>
