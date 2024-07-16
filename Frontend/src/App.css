@@ -478,3 +478,94 @@ li .remove-button:hover {
   font-weight: bold;
 }
 
+/*AuthorSlider */
+.author-slider {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  background-color: #abc5d3;
+}
+
+.author-card {
+  background-color: #e5edf0;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px; /* Adjusted static width */
+  height: 500px; /* Static height */
+  margin: 20px auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.author-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.author-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease; /* Smooth transition for magnify effect */
+  border: 3px solid #080808;
+}
+
+.author-image:hover {
+  transform: scale(1.2); /* Magnify the image on hover */
+}
+
+.author-content {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.author-card h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.author-card p {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.slider-button {
+  background-color: #6a84a1;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.slider-button:hover {
+  background-color: #0056b3;
+}
