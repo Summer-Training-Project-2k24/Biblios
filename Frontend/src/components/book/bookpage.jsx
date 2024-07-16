@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useHistory } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom'; // Updated import
 import NotFound from './notfound';
-import './BookPage.css';
 import bookService from './bookservice';
 
 const BookPage = ({ cartService }) => {
   const [book, setBook] = useState(null);
   const { id } = useParams();
-  const history = useHistory();
+  const navigate = useNavigate(); // Updated hook
 
   useEffect(() => {
     if (id) {
@@ -15,10 +14,10 @@ const BookPage = ({ cartService }) => {
         setBook(serverBook);
       }).catch(() => {
         setBook(null); // Handle book not found
+        navigate('/not-found'); // Use navigate to redirect, adjust the path as needed
       });
     }
-  }, [id]);
-
+  }, [id, navigate]); // Add navigate to the dependency array
   const addToCart = () => {
     cartService.addToCart(book);
     history.push('/cart-page');

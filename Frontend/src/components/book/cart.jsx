@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getCart, removeFromCart, changeQuantity } from '../pages/cartFunction'; // Assume these functions are defined in cartService.js
+import { getCart, removeFromCart, changeQuantity } from '../../pages/cartFunction'; // Assume these functions are defined in cartService.js
 
 const Cart = () => {
   const [cart, setCart] = useState(null);

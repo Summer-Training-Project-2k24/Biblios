@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import AuthContext from '../context/AuthContext';
 import './style.css';
-import circles from './circles.png';
+import circles from '../assets/circles.png';
 
 const AuthForm = () => {
   const { loginUser, signupUser } = useContext(AuthContext);
