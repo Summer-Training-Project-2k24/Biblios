@@ -569,3 +569,85 @@ li .remove-button:hover {
 .slider-button:hover {
   background-color: #0056b3;
 }
+
+/*book genre slider section css*/
+.genres-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .genres-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .genres-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.genre-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.genre-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.genre-card.border-bottom {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.genre-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #8c9cae, #215e84);
+  backdrop-filter: blur(5px); /* Blur effect */
+  padding: 20px;
+}
+
+.genre-icon {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.genre-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.genre-description {
+  font-size: 1rem;
+  color: #0e0d0d;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+}
+
+
