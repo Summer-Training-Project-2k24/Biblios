@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 import WhyUsCard from './WhyUsCard';
 //import './WhyUsSlider.css';
-import money from "./images/money.jpg"
-import customer from './images/customer.jpg'
-import books from './images/books.jpg'
+import money from '../assets/money.jpg';
+import customer from '../assets/customer.jpg';
+import books from '../assets/books.jpg';
 const slides = [
   {
     title: 'Wide Selection',
