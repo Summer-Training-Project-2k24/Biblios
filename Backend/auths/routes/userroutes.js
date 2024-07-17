@@ -32,8 +32,11 @@ router.get('/profile', jwtauthmidleware, async (req, res) => {
         const userId = userData.id;
         const user = await User.findById(userId);
         res.status(200).json({user});
+        console.log(user);
+        console.log("hi im in profie");
     }catch(err){
         console.error(err);
+
         res.status(500).json({ error: 'Internal Server Error' });
     }
 })
@@ -43,11 +46,14 @@ router.put('/profile/password',jwtauthmidleware, async (req,res)=>{
     try{
         const userData = req.userpayload;
         const userId = userData.id;
-     const {currentPassword,newPassword}=req.body;
+        
+     const {oldPassword,newPassword}=req.body;
      //find the user by user id
      const user=await User.findById(userId);
+    
      //if password doest not match,return error
-     if(!(await user.comparePassword(currentPassword))){
+     if(!(await user.comparePassword(oldPassword))){
+        
         return res.status(401).json({error:"current password"});
 
      }

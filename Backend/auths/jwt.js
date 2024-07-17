@@ -10,7 +10,7 @@ try{
 
     const token=req.headers.authorization.split(' ')[1];
 
-const userpayload1=jwt.verify(token,process.env.JWT_SECRET);
+const userpayload1=jwt.verify(token,"1234");
 req.userpayload=userpayload1;
 
 next();
@@ -27,7 +27,7 @@ const generatetoken=(payload)=>{
    
 
 
-    return jwt.sign(payload,process.env.JWT_SECRET);
+    return jwt.sign(payload,"1234");
 
 }
 module.exports={jwtauthmidleware,generatetoken};
