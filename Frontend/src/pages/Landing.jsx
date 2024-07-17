@@ -3,7 +3,7 @@ import Slider from "../components/Slider"
 //import Categories from "./categories"
 import WhyUsSlider from '../components/WhyUsSlider'; 
 
-import AuthorSlider from '..components/AuthorSlider';
+import AuthorSlider from '../components/AuthorSlider';
 import Footer from "./footer1";
 import BookGenresSection from "../components/BookGenre";
 

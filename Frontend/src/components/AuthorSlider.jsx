@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 //import './AuthorSlider.css';
-import ana from './images/ana.jpg'
-import dov from './images/dov.jpg'
-import rynx from './images/rynx.jpg'
-import jk from './images/jk.jpg'
-import kiran from './images/kiran.jpg'
+import ana from '../assets/ana.jpg';
+import dov from '../assets/dov.jpg';
+import rynx from '../assets/rynx.jpg';
+import jk from '../assets/jk.jpg';
+import kiran from '../assets/kiran.jpg';
 
 const authors = [
   {
