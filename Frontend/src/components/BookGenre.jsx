@@ -1,5 +1,5 @@
 import React from 'react';
-//import './genre.css';
+import './landing.css';
 
 const genres = [
   {

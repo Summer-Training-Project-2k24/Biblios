@@ -1,4 +1,4 @@
-
+import './landing.css'
 export default function Navbar()    {
 return  <header>
         <div class="logo">
