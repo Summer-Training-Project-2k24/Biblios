@@ -1,7 +1,7 @@
 // src/WhyUsSlider.js
 import React, { useState } from 'react';
 import WhyUsCard from './WhyUsCard';
-//import './WhyUsSlider.css';
+import './landing.css';
 import money from '../assets/money.jpg';
 import customer from '../assets/customer.jpg';
 import books from '../assets/books.jpg';
