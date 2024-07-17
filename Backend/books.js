@@ -57,4 +57,23 @@ app.get("/retrieve", async (req, res) => {
     }
 });
 
+app.get("/retrieve/:category", async (req, res) => {
+    try {
+        const category = req.params.category;
+        await client.connect();
+        const db = client.db(dbName);
+        const collection = db.collection(collectionName);
+
+        const data = await collection.find({
+            "categories.0.slug": category
+        }).toArray();
+        res.status(200).json(data);
+    } catch (err) {
+        console.error('Error retrieving data: ', err);
+        res.status(500).send('Error retrieving data');
+    } finally {
+        await client.close();
+    }
+});
+
 app.listen(5001);
