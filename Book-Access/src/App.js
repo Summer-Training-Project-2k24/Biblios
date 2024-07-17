@@ -4,7 +4,6 @@ import { commerce } from "./lib/commerce";
 import Products from "./components/Products/Products";
 import Navbar from "./components/Navbar/Navbar";
 import Cart from "./components/Cart/Cart";
-import Checkout from "./components/CheckoutForm/Checkout/Checkout";
 import ProductView from "./components/ProductView/ProductView";
 import Manga from "./components/Manga/Manga";
 import Footer from "./components/Footer/Footer";
@@ -31,20 +30,27 @@ const App = () => {
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
+    await fetch("http://localhost:5000/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
     console.log(data);
 
-    for (let i = 0; i < data.length; i++) {
-      try {
-        await bookModel.create({
-          name: data[i].name,
-          price: data[i].price.formatted_with_symbol,
-          imageUrl: data[i].assets[0].url,
-          description: data[i].description, // Ensure you include all required fields
-        });
-      } catch (error) {
-        console.error('Error creating book entry:', error);
-      }
-    }
+    // for (let i = 0; i < data.length; i++) {
+    //   try {
+    //     await bookModel.create({
+    //       name: data[i].name,
+    //       price: data[i].price.formatted_with_symbol,
+    //       imageUrl: data[i].assets[0].url,
+    //       description: data[i].description, // Ensure you include all required fields
+    //     });
+    //   } catch (error) {
+    //     console.error('Error creating book entry:', error);
+    //   }
+    // }
     setProducts(data);
   };
 
@@ -114,20 +120,6 @@ const App = () => {
     setCart(newCart);
   };
 
-  const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
-    try {
-      const incomingOrder = await commerce.checkout.capture(
-        checkoutTokenId,
-        newOrder
-      );
-
-      setOrder(incomingOrder);
-
-      refreshCart();
-    } catch (error) {
-      setErrorMessage(error.data.error.message);
-    }
-  };
 
   useEffect(() => {
     fetchProducts();
@@ -168,14 +160,7 @@ const App = () => {
                     onEmptyCart={handleEmptyCart}
                   />
                 </Route>
-                <Route path="/checkout" exact>
-                  <Checkout
-                    cart={cart}
-                    order={order}
-                    onCaptureCheckout={handleCaptureCheckout}
-                    error={errorMessage}
-                  />
-                </Route>
+                
                 <Route path="/product-view/:id" exact>
                   <ProductView />
                 </Route>

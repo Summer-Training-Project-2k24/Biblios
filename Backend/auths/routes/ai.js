@@ -1,10 +1,10 @@
-
 const express = require('express');
 const router = express.Router();
+const cors = require("cors")
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-
+router.use(cors())
 // Access your API key as an environment variable
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+const genAI = new GoogleGenerativeAI("AIzaSyABh80gEJruqmVwGEDUktELCIzwQvTpjdg");
 
 async function recommendation(ask) {
     const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
@@ -19,6 +19,7 @@ async function recommendation(ask) {
 
 router.post('/recommend', async function (req, res) {
     const mood = req.body.mood;
+    console.log(mood);
     try {
         const result = await recommendation(mood);
         res.json({ recommendation: result });

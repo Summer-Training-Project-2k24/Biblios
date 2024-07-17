@@ -30,8 +30,10 @@ export const AuthProvider = ({ children }) => {
         try {
             const response = await axios.post('http://localhost:3400/user/login', credentials);
             const token = response.data.token;
+            console.log (token);
             localStorage.setItem('token', token);
-            await fetchProfile(token);
+            const a=localStorage.getItem('token');
+            await fetchProfile(a);
             navigate('/profile');
         } catch (error) {
             console.error('Login error:', error);
@@ -56,7 +58,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ user, authError, signupUser, loginUser, logoutUser }}>
+        <AuthContext.Provider value={{ user, authError,setUser,signupUser, loginUser, logoutUser }}>
             {children}
         </AuthContext.Provider>
     );
