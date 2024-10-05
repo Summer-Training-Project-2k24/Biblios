@@ -3,8 +3,8 @@ import Slider from "../components/Slider"
 //import Categories from "./categories"
 import WhyUsSlider from '../components/WhyUsSlider'; 
 
-import AuthorSlider from '..components/AuthorSlider';
-import Footer from "./footer1";
+// import AuthorSlider from '../components/AuthorSlider';
+import Footer from "./Footer1";
 import BookGenresSection from "../components/BookGenre";
 
 const Landing=()=> {
@@ -12,7 +12,7 @@ const Landing=()=> {
         <Navbar />
         <Slider />
         {/* <Categories one="Higher Education" two="Management Books" three="" /> */}
-        <AuthorSlider />
+        {/* <AuthorSlider /> */}
         <BookGenresSection/>
      <section className="why-us-section">
           <h2>Why Should You Buy From Us?</h2>

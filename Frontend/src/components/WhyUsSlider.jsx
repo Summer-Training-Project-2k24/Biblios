@@ -2,24 +2,24 @@
 import React, { useState } from 'react';
 import WhyUsCard from './WhyUsCard';
 //import './WhyUsSlider.css';
-import money from "./images/money.jpg"
-import customer from './images/customer.jpg'
-import books from './images/books.jpg'
+// import money from "./images/money.jpg"
+// import customer from './images/customer.jpg'
+// import books from './images/books.jpg'
 const slides = [
   {
     title: 'Wide Selection',
     description: 'We offer a vast selection of books from various genres to cater to all readers.',
-    image: books
+    // image: books
   },
   {
     title: 'Competitive Prices',
     description: 'Enjoy competitive prices and great discounts on bestsellers and new arrivals.',
-    image: money
+    // image: money
   },
   {
     title: 'Customer Satisfaction',
     description: 'Our priority is to ensure customer satisfaction with quality service and support.',
-    image: customer
+    // image: customer
   }
 ];
 

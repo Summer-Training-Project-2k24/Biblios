@@ -10,8 +10,8 @@ import BookPage from "./components/book/bookpage";
 import NotFound from "./components/book/notfound";
 import { useState, useEffect } from 'react';
 import { getCart, removeFromCart, changeQuantity } from './pages/cartFunction'; 
-import { useParams, Link, useHistory } from 'react-router-dom';
 import bookService from './components/book/bookservice';
+
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';

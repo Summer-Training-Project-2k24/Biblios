@@ -18,10 +18,10 @@
     "mdbreact": "^5.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.24.1",
-    "styled-components": "^6.1.11",
+    "react-router-dom": "^6.26.2",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.11",
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
