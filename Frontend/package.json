@@ -19,16 +19,9 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.1",
-<<<<<<< HEAD
-
     "styled-components": "^6.1.11",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
-
-=======
-    "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1",
->>>>>>> 14d1b06164b399399ac0ae76dab5f4a6120430d6
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {

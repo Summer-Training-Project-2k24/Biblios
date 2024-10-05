@@ -17,18 +17,15 @@ module.exports=connectwithDB;
 //imports and constants and other necessatities
 
 const express = require('express');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const connectwithDB = require('./connect.js');
 const asyncHandler = require('express-async-handler');
 require('dotenv').config();
 
-const ContactMessage = require('./models/contactus.js')
+const ContactMessage = require('./auths/models/contactus.js')
 const Review=require('./auths/models/review.js')
 
-const bookModel = require('./models/books.js');
-const books = require("./sample.json");
+const bookModel = require('./auths/models/books.js');
 
 const app = express();
 
